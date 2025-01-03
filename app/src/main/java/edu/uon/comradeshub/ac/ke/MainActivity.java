@@ -9,10 +9,20 @@ import androidx.recyclerview.widget.RecyclerView;
 public class MainActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
+
+    // Array of items with name and corresponding URL
     private String[] cardItems = {
-            "HELB","Health Services","Smis Portal","Active Directory",
-            "Mtihani Plartform","UoN-Library","UON-Research",
-            "IPMO","Academics","Developer"};
+            "HELB-https://portal.hef.co.ke/auth/signin",
+            "Health Services-https://healthservices.uonbi.ac.ke/",
+            "Smis Portal-https://smis.uonbi.ac.ke/",
+            "Active Directory-http://adstudents.uonbi.ac.ke/",
+            "Mtihani Platform-https://mtihani.uonbi.ac.ke",
+            "UoN Library-https://uonlibrary.uonbi.ac.ke/",
+            "UON Research-https://uonresearch.uonbi.ac.ke/",
+            "IPMO-https://ipmo.uonbi.ac.ke/",
+            "Academics-https://academics.uonbi.ac.ke/",
+            "Developer -https://www.tiktok.com/@pr0fess0rbaad"
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
