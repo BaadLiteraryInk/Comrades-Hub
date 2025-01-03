@@ -1,6 +1,7 @@
 package edu.uon.comradeshub.ac.ke;
 
 
+import android.annotation.SuppressLint;
 import android.net.http.SslError;
 import android.os.Build;
 import android.os.Bundle;
@@ -23,6 +24,7 @@ public class WebViewActivity extends AppCompatActivity {
     String url;
     WebView webView;
 
+    @SuppressLint("SetJavaScriptEnabled")
     @Override
     // androidx.fragment.app.FragmentActivity, androidx.activity.ComponentActivity, androidx.core.app.ComponentActivity, android.app.Activity
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,10 +51,8 @@ public class WebViewActivity extends AppCompatActivity {
 
         webView.getSettings().setBuiltInZoomControls(true);
 
-        if (Build.VERSION.SDK_INT >= 21) {
-            CookieManager.getInstance().setAcceptThirdPartyCookies(this.webView, true);
-            this.webView.getSettings().setMixedContentMode(0);
-        }
+        CookieManager.getInstance().setAcceptThirdPartyCookies(this.webView, true);
+        this.webView.getSettings().setMixedContentMode(0);
         this.webView.getSettings().setLoadsImagesAutomatically(true);
         this.webView.getSettings().setDomStorageEnabled(true);
         this.webView.setLayerType(View.LAYER_TYPE_SOFTWARE, null);

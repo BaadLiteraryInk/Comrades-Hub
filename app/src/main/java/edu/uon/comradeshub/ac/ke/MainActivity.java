@@ -8,10 +8,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private RecyclerView recyclerView;
-
     // Array of items with name and corresponding URL
-    private String[] cardItems = {
+    private final String[] cardItems = {
             "HELB-https://portal.hef.co.ke/auth/signin",
             "Health Services-https://healthservices.uonbi.ac.ke/",
             "Smis Portal-https://smis.uonbi.ac.ke/",
@@ -29,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        recyclerView = findViewById(R.id.recyclerView);
+        RecyclerView recyclerView = findViewById(R.id.recyclerView);
 
         // Set GridLayoutManager with 2 columns
         recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
