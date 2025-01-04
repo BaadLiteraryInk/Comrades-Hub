@@ -1,3 +1,105 @@
 <resources>
     <string name="app_name">Comrades Hub</string>
+    <string name="app_moto">Comrades Hub.The Best Experience</string>
+    <string name="uonbi_unsa">U N S A</string>
+        <!-- Deputy Vice Chancellor (Academic Affairs) -->
+        <string name="dvca_email">dvca@uonbi.ac.ke</string>
+
+        <!-- Academic Registrar's Office -->
+        <string name="academic_registrar_email">reg-academic@uonbi.ac.ke</string>
+
+        <!-- Dean 6 Faculties -->
+        <string name="dean_faculties">Dean 6 Faculties</string>
+
+        <!-- Arts & Social Sciences -->
+        <string name="dean_fass_email">deanfass@uonbi.ac.ke</string>
+        <string name="assistant_dean_chss_email">assistant-dean-chss@uonbi.ac.ke</string>
+
+        <!-- Built Environment -->
+        <string name="exec_dean_fbe_email">execdean-fbe@uonbi.ac.ke</string>
+
+        <!-- Education -->
+        <string name="dean_fed_email">dean-fed@uonbi.ac.ke</string>
+
+        <!-- Health Sciences -->
+        <string name="dean_fhs_email">dean-fhs@uonbi.ac.ke</string>
+
+        <!-- Science & Technology -->
+        <string name="dean_fst_email">dean-fst@uonbi.ac.ke</string>
+
+        <!-- ICT Support -->
+        <string name="ict_support">ICT Support</string>
+
+        <!-- Arts & Social Sciences ICT Support -->
+        <string name="ictsupport_foa_email">ictsupportfoa@uonbi.ac.ke</string>
+        <string name="foahelp_email">foahelp@uonbi.ac.ke</string>
+
+        <!-- Built Environment ICT Support -->
+        <string name="ictsupport_add_email">ictsupportadd@uonbi.ac.ke</string>
+        <string name="sbehelp_email">sbehelp@uonbi.ac.ke</string>
+
+        <!-- Education ICT Support -->
+        <string name="ictsupport_cees_email">ictsupportcees@uonbi.ac.ke</string>
+        <string name="soedhelp_email">soedhelp@uonbi.ac.ke</string>
+
+        <!-- Health Sciences ICT Support -->
+        <string name="ictsupport_chs_email">ictsupportchs@uonbi.ac.ke</string>
+        <string name="medicinehelp_email">medicinehelp@uonbi.ac.ke</string>
+        <string name="nursinghelp_email">nursinghelp@uonbi.ac.ke</string>
+        <string name="pharmacyhelp_email">pharmacyhelp@uonbi.ac.ke</string>
+        <string name="dentalhelp_email">dentalhelp@uonbi.ac.ke</string>
+
+        <!-- Science & Technology ICT Support -->
+        <string name="sbshelp_email">sbshelp@uonbi.ac.ke</string>
+
+        <!-- Law ICT Support -->
+        <string name="ictsupport_sol_email">ictsupportsol@uonbi.ac.ke</string>
+        <string name="solhelp_email">solhelp@uonbi.ac.ke</string>
+
+        <!-- Admissions Section -->
+        <string name="admissions_email">admissions@uonbi.ac.ke</string>
+
+        <!-- Examination Section -->
+        <string name="examinations_email">examinations@uonbi.ac.ke</string>
+
+        <!-- Student Records and Statistics -->
+        <string name="student_records_email">student-records@uonbi.ac.ke</string>
+
+        <!-- Graduate Student Affairs -->
+        <string name="pg_email">pg@uonbi.ac.ke</string>
+
+        <!-- Senate Secretariat -->
+        <string name="reg_deansenate_email">reg-deansenate@uonbi.ac.ke</string>
+    <!-- Contacts Sub Menu Items -->
+    <string name="adRd">Admission and Related Dep</string>
+    <string name="IctRhelp">ICT Support-Help Dep</string>
+    <string name="dvcR">DVC and Related Dep </string>
+    <string name="deanR">Dean-Faculty</string>
+    <!-- Admission and Related Departments -->
+<string name="admissions">Admissions</string>
+<string name="examination">Examination</string>
+<string name="student_records_statistics">Student Records and Statistics</string>
+<string name="graduate_student_affairs">Graduate Student Affairs</string>
+<string name="senate_secretariat">Senate Secretariat</string>
+
+<!-- ICT Support and Related Departments -->
+<string name="arts_social_sciences_ict">Arts-Social Sciences</string>
+<string name="built_environment_ict">Built Environment</string>
+<string name="education_ict">Education</string>
+<string name="health_sciences_ict">Health Sciences</string>
+<string name="science_technology_ict">Science-Technology</string>
+<string name="law_ict">Law</string>
+
+<!-- Deputy Vice Chancellor and Related Departments -->
+<string name="dvca_academic_affairs">Deputy Vice Chancellor (AA)</string>
+<string name="academic_registrar_office">Academic Registrar’s Office</string>
+
+<!-- Dean of Faculties -->
+<string name="dean_6_faculties">Dean 6 Faculties</string>
+<string name="dean_arts_social_sciences">Arts-Social Sciences</string>
+<string name="dean_built_environment">Built Environment</string>
+<string name="dean_education">Education</string>
+    <string name="dean_law">Law</string>
+<string name="dean_health_sciences">Health Sciences</string>
+<string name="dean_science_technology">Science-Technology</string>
 </resources>

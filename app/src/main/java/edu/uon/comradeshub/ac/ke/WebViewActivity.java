@@ -50,8 +50,10 @@ public class WebViewActivity extends AppCompatActivity {
         this.webView = webView;
 
         webView.getSettings().setBuiltInZoomControls(true);
-
+        // Set CookieManager to handle cookies across WebView
+        CookieManager.getInstance().setAcceptThirdPartyCookies(webView, true);
         CookieManager.getInstance().setAcceptThirdPartyCookies(this.webView, true);
+
         this.webView.getSettings().setMixedContentMode(0);
         this.webView.getSettings().setLoadsImagesAutomatically(true);
         this.webView.getSettings().setDomStorageEnabled(true);
@@ -96,8 +98,7 @@ public class WebViewActivity extends AppCompatActivity {
         });
 
 
-        // Set CookieManager to handle cookies across WebView
-        CookieManager.getInstance().setAcceptThirdPartyCookies(webView, true);
+
 
         // Set up WebView client and Chrome client
         webView.setWebViewClient(new WebViewClient()); // Links open within the WebView

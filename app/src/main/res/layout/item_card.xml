@@ -1,38 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<!-- CardView Item 1 -->
-
 <androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/cardView"
-    android:layout_weight="200"
+    android:layout_width="200dp"
     android:layout_height="200dp"
     android:layout_margin="8dp"
     app:cardElevation="4dp"
-    android:radius="8dp"
-
-    android:layout_width="200dp">
+    android:radius="8dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="top"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="16dp">
 
+        <!-- TextView for displaying the card title -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="16dp"
             android:id="@+id/cardTitle"
             android:text="Card Title"
             android:textColor="@android:color/black"
             android:textSize="18sp" />
-       <!-- <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/urlImages"/> -->
-    </LinearLayout>
 
+        <!-- ImageView for displaying the icon -->
+        <ImageView
+            android:id="@+id/cardIcon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp" />
+
+
+    </LinearLayout>
 
 </androidx.cardview.widget.CardView>
