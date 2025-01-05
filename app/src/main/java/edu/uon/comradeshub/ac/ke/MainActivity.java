@@ -45,15 +45,27 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_contacts, menu);
+        getMenuInflater().inflate(R.menu.share_app, menu);
         return super.onCreateOptionsMenu(menu);
+
     }
 
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-
-        if (id == R.id.arts_mail) {
+        if (id == R.id.shareButton) {
+          //  Uri uri = Uri.parse("market://details?id=" + getPackageName());
+           // Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+            Intent intent = new Intent("android.intent.action.SEND");
+            intent.setType("text/plain");
+           intent.putExtra("android.intent.extra.SUBJECT", "Check out this cool UON application ");
+           intent.putExtra("android.intent.extra.TEXT", "https://play.google.com/store/apps/details?id=" + getPackageName());
+            startActivity(Intent.createChooser(intent, "Share via"));
+            return super.onOptionsItemSelected(item);
+//NOT USING SWITCH BECAUSE THE VALUES ARE NOT  HENCE ELSE IF
+        }
+        else if (id == R.id.arts_mail) {
             sendEmail("deanfass@uonbi.ac.ke");
             return true;
         } else if (id == R.id.menu_arts_ict_email) {
@@ -140,19 +152,32 @@ public class MainActivity extends AppCompatActivity {
             return super.onOptionsItemSelected(item);
         }
     }
-
-
     // Helper method to open email client
     private void sendEmail(String emailAddress) {
+        // Create an intent to send an email
         Intent emailIntent = new Intent(Intent.ACTION_SENDTO);
-        emailIntent.setData(Uri.parse("mailto:" + emailAddress));
-        emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{emailAddress});
 
+        // Ensure the URI is correctly formed with the "mailto:" scheme
+        emailIntent.setData(Uri.parse("mailto:" + emailAddress));
+
+        // Optional: Add extra data for subject and body (you can modify or remove these)
+        emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{emailAddress});
+        emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Subject Here");
+        emailIntent.putExtra(Intent.EXTRA_TEXT, "Body text here...");
+
+        // Check if there is any email client installed that can handle the intent
         if (emailIntent.resolveActivity(getPackageManager()) != null) {
+            // If an email client is available, start the activity
             startActivity(Intent.createChooser(emailIntent, "Send Email"));
         } else {
-            Toast.makeText(this, "No email client available", Toast.LENGTH_SHORT).show();
+            // If no email client is available, show a message and optionally suggest installing one
+            Toast.makeText(this, "No email client available. Please install an email client like Gmail.", Toast.LENGTH_LONG).show();
+
+            // Optionally, you can redirect the user to the Play Store to install an email app like Gmail
+            Intent marketIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.google.android.gm"));
+            startActivity(marketIntent);
         }
     }
+
 
 }

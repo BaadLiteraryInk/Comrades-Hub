@@ -1,9 +1,36 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.ComradesHub" parent="Theme.Material3.Dark.NoActionBar">
+    <style name="Base.Theme.ComradesHub" parent="Theme.Material3.Dark">
         <!-- Customize your light theme here. -->
+          <!-- Customize your theme -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
-    <style name="Base.Theme.ComradesHub." parent="Theme.AppCompat.Light.DarkActionBar"/>
-    <style name="Theme.ComradesHub" parent="Base.Theme.ComradesHub" />
+    <style name="Base.Theme.ComradesHub." parent="Theme.AppCompat.Light.NoActionBar">
+    <!-- Customize your theme -->
+        <!-- Optional: Customize other properties, like the background color -->
+        <item name="android:windowBackground">@color/colorPrimary</item>
+        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+    <item name="colorPrimary">@color/colorPrimary</item>
+    <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    <item name="colorAccent">@color/colorAccent</item>
+
+
+    </style>
+    <style name="Theme.AppCompat.Light.BlueActionBar" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Action bar background color -->
+        <item name="colorPrimary">@color/action_bar_blue</item>
+        <!-- Action bar text color (optional, if you want to change the text color) -->
+        <item name="colorPrimaryDark">@color/action_bar_blue_dark</item>
+
+    </style>
+
+        <!-- Action bar colors -->
+        <color name="action_bar_blue">#00A4FD</color> <!-- Replace with your desired blue -->
+        <color name="action_bar_blue_dark">#00A4FD</color> <!-- Darker shade for the action bar -->
+
 </resources>

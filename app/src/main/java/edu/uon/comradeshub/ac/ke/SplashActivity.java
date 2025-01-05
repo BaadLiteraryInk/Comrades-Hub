@@ -26,7 +26,7 @@ public class SplashActivity extends AppCompatActivity {
 
         // Animate Image with fade-in effect (Slow Fade-in)
         splashImage.setAlpha(0f); // Start as invisible
-        splashImage.animate().alpha(1f).setDuration(3000).start(); // Fade-in over 3 seconds
+        splashImage.animate().alpha(1f).setDuration(3500).start(); // Fade-in over 3 seconds
 
         // Animate Text 1 (Slide from left to right)
         Animation textAnimation1 = AnimationUtils.loadAnimation(this, R.anim.text_animation_1);

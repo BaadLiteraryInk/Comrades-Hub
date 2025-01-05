@@ -3,4 +3,8 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="navigation">#00A4FD</color>
+    <!-- Define your blue color -->
+    <color name="colorPrimary">#2196F3</color>  <!-- Blue color -->
+    <color name="colorPrimaryDark">#1976D2</color> <!-- Darker blue for status bar -->
+    <color name="colorAccent">#03A9F4</color> <!-- Accent color -->
 </resources>
