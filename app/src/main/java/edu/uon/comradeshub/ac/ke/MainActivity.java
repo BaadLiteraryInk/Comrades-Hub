@@ -55,17 +55,16 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         if (id == R.id.shareButton) {
-          //  Uri uri = Uri.parse("market://details?id=" + getPackageName());
-           // Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+            //  Uri uri = Uri.parse("market://details?id=" + getPackageName());
+            // Intent intent = new Intent(Intent.ACTION_VIEW, uri);
             Intent intent = new Intent("android.intent.action.SEND");
             intent.setType("text/plain");
-           intent.putExtra("android.intent.extra.SUBJECT", "Check out this cool UON application ");
-           intent.putExtra("android.intent.extra.TEXT", "https://play.google.com/store/apps/details?id=" + getPackageName());
+            intent.putExtra("android.intent.extra.SUBJECT", "Check out this cool UON application ");
+            intent.putExtra("android.intent.extra.TEXT", "https://play.google.com/store/apps/details?id=" + getPackageName());
             startActivity(Intent.createChooser(intent, "Share via"));
             return super.onOptionsItemSelected(item);
 //NOT USING SWITCH BECAUSE THE VALUES ARE NOT  HENCE ELSE IF
-        }
-        else if (id == R.id.arts_mail) {
+        } else if (id == R.id.arts_mail) {
             sendEmail("deanfass@uonbi.ac.ke");
             return true;
         } else if (id == R.id.menu_arts_ict_email) {
@@ -98,9 +97,7 @@ public class MainActivity extends AppCompatActivity {
         } else if (id == R.id.menu_medicine_ictsupport_email) {
             sendEmail("ictsupportchs@uonbi.ac.ke");
             return true;
-        }
-
-        else if (id == R.id.menu_medicine_help_email) {
+        } else if (id == R.id.menu_medicine_help_email) {
             sendEmail("medicinehelp@uonbi.ac.ke");
             return true;
         } else if (id == R.id.menu_nursing_help_email) {
@@ -152,6 +149,8 @@ public class MainActivity extends AppCompatActivity {
             return super.onOptionsItemSelected(item);
         }
     }
+
+    // Helper method to open email client
     // Helper method to open email client
     private void sendEmail(String emailAddress) {
         // Create an intent to send an email
@@ -165,19 +164,17 @@ public class MainActivity extends AppCompatActivity {
         emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Subject Here");
         emailIntent.putExtra(Intent.EXTRA_TEXT, "Body text here...");
 
-        // Check if there is any email client installed that can handle the intent
-        if (emailIntent.resolveActivity(getPackageManager()) != null) {
-            // If an email client is available, start the activity
+        try {
             startActivity(Intent.createChooser(emailIntent, "Send Email"));
-        } else {
-            // If no email client is available, show a message and optionally suggest installing one
+        } catch (android.content.ActivityNotFoundException ex) {
             Toast.makeText(this, "No email client available. Please install an email client like Gmail.", Toast.LENGTH_LONG).show();
 
             // Optionally, you can redirect the user to the Play Store to install an email app like Gmail
             Intent marketIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.google.android.gm"));
-            startActivity(marketIntent);
+            // startActivity(marketIntent);
         }
     }
+
 
 
 }
