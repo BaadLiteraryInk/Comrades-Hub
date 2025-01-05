@@ -66,9 +66,11 @@ public class WebViewActivity extends AppCompatActivity {
         this.webView.getSettings().setDomStorageEnabled(true);
         this.webView.getSettings().setLoadWithOverviewMode(true);
         this.webView.getSettings().getJavaScriptCanOpenWindowsAutomatically();
+
         WebSettings webSettings = this.webView.getSettings();
 
-
+        webSettings.setAllowUniversalAccessFromFileURLs(true);
+        webSettings.setAllowFileAccessFromFileURLs(true);
         webSettings.setBuiltInZoomControls(true);
         //webSettings.setJavaScriptEnabled(true); // Enable JavaScript
         webSettings.setLoadsImagesAutomatically(true); // Load images automatically

@@ -1,6 +1,11 @@
 package edu.uon.comradeshub.ac.ke;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -19,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
             "UON Research-https://uonresearch.uonbi.ac.ke/",
             "IPMO-https://ipmo.uonbi.ac.ke/",
             "Academics-https://academics.uonbi.ac.ke/",
-            "Developer -https://www.tiktok.com/@pr0fess0rbaad"
+            "Baad Tutor"
     };
 
     @Override
@@ -36,4 +41,118 @@ public class MainActivity extends AppCompatActivity {
         CardAdapter adapter = new CardAdapter(cardItems);
         recyclerView.setAdapter(adapter);
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_contacts, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+
+        if (id == R.id.arts_mail) {
+            sendEmail("deanfass@uonbi.ac.ke");
+            return true;
+        } else if (id == R.id.menu_arts_ict_email) {
+            sendEmail("ictsupportfoa@uonbi.ac.ke");
+            return true;
+        } else if (id == R.id.menu_arts_ict_help_email) {
+            sendEmail("foahelp@uonbi.ac.ke");
+            return true;
+        } else if (id == R.id.menu_execdean_fbe_email) {
+            sendEmail("execdean-fbe@uonbi.ac.ke");
+            return true;
+        } else if (id == R.id.menu_ictsupport_add_email) {
+            sendEmail("ictsupportadd@uonbi.ac.ke");
+            return true;
+        } else if (id == R.id.menu_sbe_help_email) {
+            sendEmail("sbehelp@uonbi.ac.ke");
+            return true;
+        } else if (id == R.id.menu_dean_fed_email) {
+            sendEmail("dean-fed@uonbi.ac.ke");
+            return true;
+        } else if (id == R.id.menu_ictsupport_cees_email) {
+            sendEmail("ictsupportcees@uonbi.ac.ke");
+            return true;
+        } else if (id == R.id.menu_soed_help_email) {
+            sendEmail("soedhelp@uonbi.ac.ke");
+            return true;
+        } else if (id == R.id.menu_dean_fhs_email) {
+            sendEmail("dean-fhs@uonbi.ac.ke");
+            return true;
+        } else if (id == R.id.menu_medicine_ictsupport_email) {
+            sendEmail("ictsupportchs@uonbi.ac.ke");
+            return true;
+        }
+
+        else if (id == R.id.menu_medicine_help_email) {
+            sendEmail("medicinehelp@uonbi.ac.ke");
+            return true;
+        } else if (id == R.id.menu_nursing_help_email) {
+            sendEmail("nursinghelp@uonbi.ac.ke");
+            return true;
+        } else if (id == R.id.menu_pharmacy_help_email) {
+            sendEmail("pharmacyhelp@uonbi.ac.ke");
+            return true;
+        } else if (id == R.id.menu_dental_help_email) {
+            sendEmail("dentalhelp@uonbi.ac.ke");
+            return true;
+        } else if (id == R.id.menu_dean_fst_email) {
+            sendEmail("dean-fst@uonbi.ac.ke");
+            return true;
+        } else if (id == R.id.menu_sbs_help_email) {
+            sendEmail("sbshelp@uonbi.ac.ke");
+            return true;
+        } else if (id == R.id.menu_dean_law_email) {
+            sendEmail("dean-law@uonbi.ac.ke");
+            return true;
+        } else if (id == R.id.menu_ictsupport_sol_email) {
+            sendEmail("ictsupportsol@uonbi.ac.ke");
+            return true;
+        } else if (id == R.id.menu_sol_help_email) {
+            sendEmail("solhelp@uonbi.ac.ke");
+            return true;
+        } else if (id == R.id.menu_admissions_email) {
+            sendEmail("admissions@uonbi.ac.ke");
+            return true;
+        } else if (id == R.id.menu_examinations_email) {
+            sendEmail("examinations@uonbi.ac.ke");
+            return true;
+        } else if (id == R.id.menu_student_records_email) {
+            sendEmail("student-records@uonbi.ac.ke");
+            return true;
+        } else if (id == R.id.menu_pg_email) {
+            sendEmail("pg@uonbi.ac.ke");
+            return true;
+        } else if (id == R.id.menu_reg_dean_senate_email) {
+            sendEmail("reg-deansenate@uonbi.ac.ke");
+            return true;
+        } else if (id == R.id.menu_dvca_email) {
+            sendEmail("dvca@uonbi.ac.ke");
+            return true;
+        } else if (id == R.id.menu_reg_academic_email) {
+            sendEmail("reg-academic@uonbi.ac.ke");
+            return true;
+        } else {
+            return super.onOptionsItemSelected(item);
+        }
+    }
+
+
+    // Helper method to open email client
+    private void sendEmail(String emailAddress) {
+        Intent emailIntent = new Intent(Intent.ACTION_SENDTO);
+        emailIntent.setData(Uri.parse("mailto:" + emailAddress));
+        emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{emailAddress});
+
+        if (emailIntent.resolveActivity(getPackageManager()) != null) {
+            startActivity(Intent.createChooser(emailIntent, "Send Email"));
+        } else {
+            Toast.makeText(this, "No email client available", Toast.LENGTH_SHORT).show();
+        }
+    }
+
 }

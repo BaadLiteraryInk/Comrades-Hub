@@ -24,22 +24,29 @@ public class SplashActivity extends AppCompatActivity {
         splashText1 = findViewById(R.id.splashText1);
         splashText2 = findViewById(R.id.splashText2);
 
-        // Animate Image with fade-in effect
-        splashImage.animate().alpha(1f).setDuration(5000).start();
+        // Animate Image with fade-in effect (Slow Fade-in)
+        splashImage.setAlpha(0f); // Start as invisible
+        splashImage.animate().alpha(1f).setDuration(3000).start(); // Fade-in over 3 seconds
 
-        // Animate Text 1 (First text) - Slide from left to right
+        // Animate Text 1 (Slide from left to right)
         Animation textAnimation1 = AnimationUtils.loadAnimation(this, R.anim.text_animation_1);
         splashText1.startAnimation(textAnimation1);
 
-        // Animate Text 2 (Second text) - Fade in
+        // Animate Text 2 (Fade-in)
         Animation textAnimation2 = AnimationUtils.loadAnimation(this, R.anim.text_animation_2);
         splashText2.startAnimation(textAnimation2);
 
         // Set a delay before transitioning to the next activity (MainActivity)
         splashImage.postDelayed(() -> {
             // Start MainActivity after the splash screen
-            startActivity(new Intent(SplashActivity.this, MainActivity.class));
-            finish(); // Close SplashActivity so it is not in the backstack
-        }, 4000); // 4-second delay
+            Intent intent = new Intent(SplashActivity.this, MainActivity.class);
+            startActivity(intent);
+
+            // Apply custom slide-in transition
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+
+            // Close SplashActivity so it is not in the backstack
+            finish();
+        }, 5000); // Delay to match the total duration of animations (adjustable)
     }
 }

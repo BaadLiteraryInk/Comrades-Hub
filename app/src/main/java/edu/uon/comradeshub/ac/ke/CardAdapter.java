@@ -57,8 +57,12 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.CardViewHolder
         }
 
         holder.cardView.setOnClickListener(v -> {
-            if (url != null) {
-                // Create an intent to open WebViewActivity with the URL
+            if ("Baad Tutor".equals(title)) {
+                // Launch BaadActivity when "Baad Tutor" is clicked
+                Intent intent = new Intent(v.getContext(), BaadActivity.class);
+                v.getContext().startActivity(intent);
+            } else if (url != null) {
+                // For other cards, open the WebViewActivity with the URL
                 Intent intent = new Intent(v.getContext(), WebViewActivity.class);
                 intent.putExtra("url", url);
                 v.getContext().startActivity(intent);
@@ -88,12 +92,13 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.CardViewHolder
                 return R.drawable.bookshelficn;
             case "UON Research":
                 return R.drawable.researchicn;
+            case "Baad Tutor":
+                return R.drawable.baadicn;
             case "IPMO":
                 return R.drawable.ipicn;
             case "Academics":
                 return R.drawable.academicsicn;
-            case "Developer":
-                return R.drawable.developericn;
+
             default:
                 return 0; // Return 0 if no match is found (no image)
         }

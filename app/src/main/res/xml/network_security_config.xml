@@ -2,5 +2,7 @@
 <network-security-config>
     <domain-config cleartextTrafficPermitted="true">
         <domain includeSubdomains="true">https://mtihani.uonbi.ac.ke</domain>
+        <domain includeSubdomains="true">https://smis.uonbi.ac.ke/</domain>
+        <domain includeSubdomains="true">http://adstudents.uonbi.ac.ke/</domain>
     </domain-config>
 </network-security-config>

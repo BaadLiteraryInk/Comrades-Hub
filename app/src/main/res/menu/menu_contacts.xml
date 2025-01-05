@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Main "Contacts" Menu Item -->
+    <item
+        android:id="@+id/menu_contacts"
+        android:title="Contacts">
+
+        <!-- Submenu for "Faculty" under "Contacts" -->
+        <menu>
+            <item android:title="Faculty">
+                <menu>
+
+                    <!-- Submenu for "Arts-Social Science" -->
+                    <item android:id="@+id/menu_arts_and_social_sciences"
+                        android:title="Arts-Social Science">
+                        <menu>
+                            <item android:title="Faculty Dean" android:id="@+id/arts_dean">
+                                <menu>
+                                    <item android:id="@+id/arts_mail" android:title="deanfass@uonbi.ac.ke"/>
+                                </menu>
+                            </item>
+
+                            <item
+                                android:id="@+id/menu_arts_ict_support_help"
+                                android:title="ICT Support-Help">
+                                <menu>
+                                    <item
+                                        android:id="@+id/menu_arts_ict_email"
+                                        android:title="ictsupportfoa@uonbi.ac.ke"/>
+                                    <item
+                                        android:id="@+id/menu_arts_ict_help_email"
+                                        android:title="foahelp@uonbi.ac.ke"/>
+                                </menu>
+                            </item>
+                        </menu>
+                    </item>
+
+                    <!-- Submenu for "Built Environment" -->
+                    <item
+                        android:id="@+id/menu_built_environment"
+                        android:title="Built Environment">
+                        <menu>
+                            <item
+                                android:id="@+id/menu_built_faculty_dean"
+                                android:title="Faculty Dean">
+                                <menu>
+                                    <item
+                                        android:id="@+id/menu_execdean_fbe_email"
+                                        android:title="execdean-fbe@uonbi.ac.ke"/>
+                                </menu>
+                            </item>
+                            <item
+                                android:id="@+id/menu_built_ict_support_help"
+                                android:title="ICT Support-Help">
+                                <menu>
+                                    <item
+                                        android:id="@+id/menu_ictsupport_add_email"
+                                        android:title="ictsupportadd@uonbi.ac.ke"/>
+                                    <item
+                                        android:id="@+id/menu_sbe_help_email"
+                                        android:title="sbehelp@uonbi.ac.ke"/>
+                                </menu>
+                            </item>
+                        </menu>
+                    </item>
+
+                    <!-- Submenu for "Education" -->
+                    <item
+                        android:id="@+id/menu_education"
+                        android:title="Education">
+                        <menu>
+                            <item
+                                android:id="@+id/menu_education_faculty_dean"
+                                android:title="Faculty Dean">
+                                <menu>
+                                    <item
+                                        android:id="@+id/menu_dean_fed_email"
+                                        android:title="dean-fed@uonbi.ac.ke"/>
+                                </menu>
+                            </item>
+                            <item
+                                android:id="@+id/menu_education_ict_support_help"
+                                android:title="ICT Support-Help">
+                                <menu>
+                                    <item
+                                        android:id="@+id/menu_ictsupport_cees_email"
+                                        android:title="ictsupportcees@uonbi.ac.ke"/>
+                                    <item
+                                        android:id="@+id/menu_soed_help_email"
+                                        android:title="soedhelp@uonbi.ac.ke"/>
+                                </menu>
+                            </item>
+                        </menu>
+                    </item>
+
+                    <!-- Submenu for "Health Sciences" -->
+                    <item
+                        android:id="@+id/menu_health_sciences"
+                        android:title="Health Sciences">
+                        <menu>
+                            <item
+                                android:id="@+id/menu_health_sciences_faculty_dean"
+                                android:title="Faculty Dean">
+                                <menu>
+                                    <item
+                                        android:id="@+id/menu_dean_fhs_email"
+                                        android:title="dean-fhs@uonbi.ac.ke"/>
+                                </menu>
+                            </item>
+                            <item
+                                android:id="@+id/menu_health_ict_support_help"
+                                android:title="ICT Support-Help"> ictsupportchs@uonbi.ac.ke
+                                <menu>
+                                    <item
+                                        android:id="@+id/menu_medicine_ictsupport_email"
+                                        android:title="ictsupportchs@uonbi.ac.ke"/>
+                                    <item
+                                        android:id="@+id/menu_medicine_help_email"
+                                        android:title="medicinehelp@uonbi.ac.ke"/>
+                                    <item
+                                        android:id="@+id/menu_nursing_help_email"
+                                        android:title="nursinghelp@uonbi.ac.ke"/>
+                                    <item
+                                        android:id="@+id/menu_pharmacy_help_email"
+                                        android:title="pharmacyhelp@uonbi.ac.ke"/>
+                                    <item
+                                        android:id="@+id/menu_dental_help_email"
+                                        android:title="dentalhelp@uonbi.ac.ke"/>
+                                </menu>
+                            </item>
+                        </menu>
+                    </item>
+
+                    <!-- Submenu for "Science-Technology" -->
+                    <item
+                        android:id="@+id/menu_science_and_technology"
+                        android:title="Science-Technology">
+                        <menu>
+                            <item
+                                android:id="@+id/menu_science_technology_faculty_dean"
+                                android:title="Faculty Dean">
+                                <menu>
+                                    <item
+                                        android:id="@+id/menu_dean_fst_email"
+                                        android:title="dean-fst@uonbi.ac.ke"/>
+                                </menu>
+                            </item>
+                            <item
+                                android:id="@+id/menu_science_technology_ict_support_help"
+                                android:title="ICT Support-Help">
+                                <menu>
+                                    <item
+                                        android:id="@+id/menu_sbs_help_email"
+                                        android:title="sbshelp@uonbi.ac.ke"/>
+                                </menu>
+                            </item>
+                        </menu>
+                    </item>
+
+                    <!-- Submenu for "Law" under Contacts -->
+                    <item
+                        android:id="@+id/menu_law"
+                        android:title="Law">
+                        <menu>
+                            <item
+                                android:id="@+id/menu_law_faculty_dean"
+                                android:title="Faculty Dean">
+                                <menu>
+                                    <item
+                                        android:id="@+id/menu_dean_law_email"
+                                        android:title="dean-law@uonbi.ac.ke"/>
+                                </menu>
+                            </item>
+                            <item
+                                android:id="@+id/menu_law_ict_support_help"
+                                android:title="ICT Support-Help">
+                                <menu>
+                                    <item
+                                        android:id="@+id/menu_ictsupport_sol_email"
+                                        android:title="ictsupportsol@uonbi.ac.ke"/>
+                                    <item
+                                        android:id="@+id/menu_sol_help_email"
+                                        android:title="solhelp@uonbi.ac.ke"/>
+                                </menu>
+                            </item>
+                        </menu>
+                    </item>
+
+                </menu>
+            </item>
+        </menu>
+    </item>
+
+    <!-- "Admissions and Related Dep" - Excluded from "Contacts" Menu -->
+    <item
+        android:id="@+id/menu_admissions_and_related_dep"
+        android:title="Admissions and Related Dep">
+        <menu>
+            <item
+                android:id="@+id/menu_admissions"
+                android:title="Admissions">
+                <menu>
+                    <item
+                        android:id="@+id/menu_admissions_email"
+                        android:title="admissions@uonbi.ac.ke"/>
+                </menu>
+            </item>
+            <item
+                android:id="@+id/menu_examination"
+                android:title="Examination">
+                <menu>
+                    <item
+                        android:id="@+id/menu_examinations_email"
+                        android:title="examinations@uonbi.ac.ke"/>
+                </menu>
+            </item>
+            <item
+                android:id="@+id/menu_student_records_and_statistics"
+                android:title="Student Records and Statistics">
+                <menu>
+                    <item
+                        android:id="@+id/menu_student_records_email"
+                        android:title="student-records@uonbi.ac.ke"/>
+                </menu>
+            </item>
+            <item
+                android:id="@+id/menu_graduate_student_affairs"
+                android:title="Graduate Student Affairs">
+                <menu>
+                    <item
+                        android:id="@+id/menu_pg_email"
+                        android:title="pg@uonbi.ac.ke"/>
+                </menu>
+            </item>
+            <item
+                android:id="@+id/menu_senate_secretariat"
+                android:title="Senate Secretariat">
+                <menu>
+                    <item
+                        android:id="@+id/menu_reg_dean_senate_email"
+                        android:title="reg-deansenate@uonbi.ac.ke"/>
+                </menu>
+            </item>
+        </menu>
+    </item>
+
+    <!-- "DVC and Related Dep" - Excluded from "Contacts" Menu -->
+    <item
+        android:id="@+id/menu_dvc_and_related_dep"
+        android:title="DVC and Related Dep">
+        <menu>
+            <item
+                android:id="@+id/menu_dv_chancellor_aa"
+                android:title="DV Chancellor AA">
+                <menu>
+                    <item
+                        android:id="@+id/menu_dvca_email"
+                        android:title="dvca@uonbi.ac.ke"/>
+                </menu>
+            </item>
+            <item
+                android:id="@+id/menu_academic_registrar_office"
+                android:title="Academic Registrar Office">
+                <menu>
+                    <item
+                        android:id="@+id/menu_reg_academic_email"
+                        android:title="reg-academic@uonbi.ac.ke"/>
+                </menu>
+            </item>
+        </menu>
+    </item>
+
+</menu>
