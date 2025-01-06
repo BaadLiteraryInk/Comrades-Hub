@@ -52,7 +52,8 @@ public class WebViewActivity extends AppCompatActivity {
         webSettings.setLayoutAlgorithm(WebSettings.LayoutAlgorithm.NORMAL);
         webSettings.setMixedContentMode(WebSettings.MIXED_CONTENT_ALWAYS_ALLOW);
         webSettings.setJavaScriptEnabled(true); // Enable JavaScript
-
+// Enable hardware acceleration for better performance
+        webView.setLayerType(View.LAYER_TYPE_HARDWARE, null);
         webView.setLayerType(View.LAYER_TYPE_SOFTWARE, null);
 
         // Set up WebChromeClient to track page load progress
