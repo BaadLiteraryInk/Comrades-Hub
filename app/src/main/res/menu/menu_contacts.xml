@@ -274,7 +274,14 @@
     <!-- Add this item for "UNSA" -->
     <item
         android:id="@+id/menu_unsa"
-        android:title="UNSA"/>
+        android:title="UNSA">
+        <menu>
+            <item
+                android:id="@+id/menu_unsa_email"
+                android:title="unsa@students.uonbi.ac.ke"/>
+        </menu>
+    </item>
+
     <!-- Add this item for "Update App" -->
     <item
         android:id="@+id/menu_update_app"

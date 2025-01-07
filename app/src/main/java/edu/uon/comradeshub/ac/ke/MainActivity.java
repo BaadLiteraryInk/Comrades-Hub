@@ -152,7 +152,7 @@ public class MainActivity extends AppCompatActivity {
         } else if (id == R.id.menu_reg_academic_email) {
             sendEmail("reg-academic@uonbi.ac.ke");
             return true;
-        } else if (id == R.id.menu_unsa) {
+        } else if (id == R.id.menu_unsa_email) {
             sendEmail("unsa@students.uonbi.ac.ke");
             return true;
         }
