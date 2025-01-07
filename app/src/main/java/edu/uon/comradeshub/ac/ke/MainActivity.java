@@ -7,6 +7,13 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+/*import com.google.android.play.core.appupdate.AppUpdateInfo;
+import com.google.android.play.core.appupdate.AppUpdateManager;
+import com.google.android.play.core.appupdate.AppUpdateManagerFactory;
+import com.google.android.play.core.install.model.AppUpdateType;
+import com.google.android.play.core.install.model.UpdateAvailability;
+import com.google.android.play.core.tasks.Task;*/
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -145,8 +152,29 @@ public class MainActivity extends AppCompatActivity {
         } else if (id == R.id.menu_reg_academic_email) {
             sendEmail("reg-academic@uonbi.ac.ke");
             return true;
-        } else {
+        }else if (id == R.id.menu_update_app) {
+            // Handle "Update App" action
+            checkForAppUpdate();
+            return true;}
+        else {
             return super.onOptionsItemSelected(item);
+        }
+    }
+  /*  private void checkForAppUpdate() { AppUpdateManager appUpdateManager = AppUpdateManagerFactory.create(this); Task<AppUpdateInfo> appUpdateInfoTask = appUpdateManager.getAppUpdateInfo();
+        appUpdateInfoTask.addOnSuccessListener(appUpdateInfo -> { if (appUpdateInfo.updateAvailability() == UpdateAvailability.UPDATE_AVAILABLE && appUpdateInfo.isUpdateTypeAllowed(AppUpdateType.IMMEDIATE))
+        { try { appUpdateManager.startUpdateFlowForResult(appUpdateInfo, AppUpdateType.IMMEDIATE, MainActivity.this, UPDATE_REQUEST_CODE); } catch (Exception e) { e.printStackTrace(); }
+        } else { Toast.makeText(MainActivity.this, "No updates available.", Toast.LENGTH_SHORT).show(); } });
+        appUpdateInfoTask.addOnFailureListener
+                (e -> { Toast.makeText(MainActivity.this, "Failed to check for updates: " + e.getMessage(), Toast.LENGTH_LONG).show(); }); }
+    */private void checkForAppUpdate() {
+        // Intent to open the Play Store to your app's details page
+        Intent updateIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + getPackageName()));
+        try {
+            startActivity(updateIntent);
+        } catch (android.content.ActivityNotFoundException e) {
+            // If the Play Store app is not available, open the URL in the browser
+            updateIntent.setData(Uri.parse("https://play.google.com/store/apps/details?id=" + getPackageName()));
+            startActivity(updateIntent);
         }
     }
 
