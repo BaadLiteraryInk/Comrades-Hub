@@ -242,12 +242,30 @@
                     </item>
                 </menu>
             </item>
-
+            <!-- Add this item for "UNSA" -->
+            <item
+                android:id="@+id/menu_unsa"
+                android:title="UNSA">
+                <menu>
+                    <item
+                        android:id="@+id/menu_unsa_email"
+                        android:title="unsa@students.uonbi.ac.ke"/>
+                </menu>
+            </item>
             <!-- Move the DVC and Related Dep Section under Contacts -->
             <item
                 android:id="@+id/menu_dvc_and_related_dep"
                 android:title="DVC and Related Dep">
                 <menu>
+                    <item
+                        android:id="@+id/menu_vchancellor"
+                        android:title="Vice Chancellor">
+                        <menu>
+                            <item
+                                android:id="@+id/menu_vc_email"
+                                android:title="vc@uonbi.ac.ke"/>
+                        </menu>
+                    </item>
                     <item
                         android:id="@+id/menu_dv_chancellor_aa"
                         android:title="DV Chancellor AA">
@@ -269,22 +287,106 @@
                 </menu>
                     </item>
 
-                </menu>
-            </item>
-    <!-- Add this item for "UNSA" -->
-    <item
-        android:id="@+id/menu_unsa"
-        android:title="UNSA">
-        <menu>
-            <item
-                android:id="@+id/menu_unsa_email"
-                android:title="unsa@students.uonbi.ac.ke"/>
+            <!-- Add this item for "Finance" -->
+                <item
+                    android:id="@+id/menu_finance"
+                    android:title="Finance">
+                    <menu>
+                        <item
+                            android:id="@+id/menu_bursar"
+                            android:title="Bursar">
+                            <menu>
+                                <item
+                                    android:id="@+id/menu_chs"
+                                    android:title="College of Health Sciences">
+                                    <menu>
+                                        <item
+                                            android:id="@+id/menu_chs_email1"
+                                            android:title="bursar-chs@uonbi.ac.ke"/>
+                                        <item
+                                            android:id="@+id/menu_chs_email2"
+                                            android:title="chsbursarhelp@uonbi.ac.ke"/>
+                                    </menu>
+                                </item>
+                                <item
+                                    android:id="@+id/menu_cavs"
+                                    android:title="Agriculture and Veterinary Sciences">
+                                    <menu>
+                                        <item
+                                            android:id="@+id/menu_cavs_email1"
+                                            android:title="bursar-cavs@uonbi.ac.ke"/>
+                                        <item
+                                            android:id="@+id/menu_cavs_email2"
+                                            android:title="cavsbursarhelp@uonbi.ac.ke"/>
+                                    </menu>
+                                </item>
+                                <item
+                                    android:id="@+id/menu_cae"
+                                    android:title="Architecture and Engineering">
+                                    <menu>
+                                        <item
+                                            android:id="@+id/menu_cae_email1"
+                                            android:title="bursar-cae@uonbi.ac.ke"/>
+                                        <item
+                                            android:id="@+id/menu_cae_email2"
+                                            android:title="caebursarhelp@uonbi.ac.ke"/>
+                                    </menu>
+                                </item>
+                                <item
+                                    android:id="@+id/menu_chss"
+                                    android:title="Humanities and Social Sciences">
+                                    <menu>
+                                        <item
+                                            android:id="@+id/menu_chss_email1"
+                                            android:title="bursar-chss@uonbi.ac.ke"/>
+                                        <item
+                                            android:id="@+id/menu_chss_email2"
+                                            android:title="chssbursarhelp@uonbi.ac.ke"/>
+                                    </menu>
+                                </item>
+                                <item
+                                    android:id="@+id/menu_cees"
+                                    android:title="Education and External Studies">
+                                    <menu>
+                                        <item
+                                            android:id="@+id/menu_cees_email1"
+                                            android:title="bursar-cees@uonbi.ac.ke"/>
+                                        <item
+                                            android:id="@+id/menu_cees_email2"
+                                            android:title="ceesbursarhelp@uonbi.ac.ke"/>
+                                    </menu>
+                                </item>
+                                <item
+                                    android:id="@+id/menu_cbps"
+                                    android:title="Biological and Physical Sciences">
+                                    <menu>
+                                        <item
+                                            android:id="@+id/menu_cbps_email1"
+                                            android:title="bursar-cbps@uonbi.ac.ke"/>
+                                        <item
+                                            android:id="@+id/menu_cbps_email2"
+                                            android:title="cbpsbursarhelp@uonbi.ac.ke"/>
+                                    </menu>
+                                </item>
+                                <item
+                                    android:id="@+id/menu_ksc"
+                                    android:title="Kenya Science Campus">
+                                    <menu>
+                                        <item
+                                            android:id="@+id/menu_ksc_email1"
+                                            android:title="kscfinance@uonbi.ac.ke"/>
+                                        <item
+                                            android:id="@+id/menu_ksc_phone"
+                                            android:title="020-491-6707"/>
+                                    </menu>
+                                </item>
+                            </menu>
+                        </item>
+                    </menu>
+                </item>
         </menu>
-    </item>
-
-    <!-- Add this item for "Update App" -->
-    <item
-        android:id="@+id/menu_update_app"
+       </item>
+    <!-- Add this item for "Update App" as its own menu item -->
+    <item android:id="@+id/menu_update_app"
         android:title="Update App"/>
-
-        </menu>
+</menu>

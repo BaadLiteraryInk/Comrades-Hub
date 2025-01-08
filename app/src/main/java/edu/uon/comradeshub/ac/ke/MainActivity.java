@@ -71,6 +71,21 @@ public class MainActivity extends AppCompatActivity {
             startActivity(Intent.createChooser(intent, "Share via"));
             return super.onOptionsItemSelected(item);
 //NOT USING SWITCH BECAUSE THE VALUES ARE NOT  HENCE ELSE IF
+        }else if (id == R.id.menu_admissions_email) {
+            sendEmail("admissions@uonbi.ac.ke");
+            return true;
+        } else if (id == R.id.menu_examinations_email) {
+            sendEmail("examinations@uonbi.ac.ke");
+            return true;
+        } else if (id == R.id.menu_student_records_email) {
+            sendEmail("student-records@uonbi.ac.ke");
+            return true;
+        } else if (id == R.id.menu_pg_email) {
+            sendEmail("pg@uonbi.ac.ke");
+            return true;
+        } else if (id == R.id.menu_reg_dean_senate_email) {
+            sendEmail("reg-deansenate@uonbi.ac.ke");
+            return true;
         } else if (id == R.id.arts_mail) {
             sendEmail("deanfass@uonbi.ac.ke");
             return true;
@@ -131,22 +146,51 @@ public class MainActivity extends AppCompatActivity {
         } else if (id == R.id.menu_sol_help_email) {
             sendEmail("solhelp@uonbi.ac.ke");
             return true;
-        } else if (id == R.id.menu_admissions_email) {
-            sendEmail("admissions@uonbi.ac.ke");
+        } else if (id == R.id.menu_vc_email) {
+            sendEmail("vc@uonbi.ac.ke");
             return true;
-        } else if (id == R.id.menu_examinations_email) {
-            sendEmail("examinations@uonbi.ac.ke");
+        } else if (id == R.id.menu_cae_email1) {
+            sendEmail("bursar-cae@uonbi.ac.ke");
             return true;
-        } else if (id == R.id.menu_student_records_email) {
-            sendEmail("student-records@uonbi.ac.ke");
+        } else if (id == R.id.menu_cae_email2) {
+            sendEmail("caebursarhelp@uonbi.ac.ke");
             return true;
-        } else if (id == R.id.menu_pg_email) {
-            sendEmail("pg@uonbi.ac.ke");
+        } else if (id == R.id.menu_cavs_email1) {
+            sendEmail("bursar-cavs@uonbi.ac.ke");
             return true;
-        } else if (id == R.id.menu_reg_dean_senate_email) {
-            sendEmail("reg-deansenate@uonbi.ac.ke");
+        } else if (id == R.id.menu_cavs_email2) {
+            sendEmail("cavsbursarhelp@uonbi.ac.ke");
             return true;
-        } else if (id == R.id.menu_dvca_email) {
+        } else if (id == R.id.menu_cbps_email1) {
+            sendEmail("bursar-cbps@uonbi.ac.ke");
+            return true;
+        } else if (id == R.id.menu_cbps_email2) {
+            sendEmail("cbpsbursarhelp@uonbi.ac.ke");
+            return true;
+        } else if (id == R.id.menu_cees_email1) {
+            sendEmail("bursar-cees@uonbi.ac.ke");
+            return true;
+        } else if (id == R.id.menu_cees_email2) {
+            sendEmail("ceesbursarhelp@uonbi.ac.ke");
+            return true;
+        }
+        else if (id == R.id.menu_chs_email1) {
+            sendEmail("bursar-chs@uonbi.ac.ke");
+            return true;
+        } else if (id == R.id.menu_chs_email2) {
+            sendEmail("chsbursarhelp@uonbi.ac.ke");
+            return true;
+        } else if (id == R.id.menu_chss_email1) {
+            sendEmail("bursar-chss@uonbi.ac.ke");
+            return true;
+        } else if (id == R.id.menu_chss_email2) {
+            sendEmail("chssbursarhelp@uonbi.ac.ke");
+            return true;
+        } else if (id == R.id.menu_ksc_email1) {
+            sendEmail("kscfinance@uonbi.ac.ke");
+            return true;
+        }
+        else if (id == R.id.menu_dvca_email) {
             sendEmail("dvca@uonbi.ac.ke");
             return true;
         } else if (id == R.id.menu_reg_academic_email) {
