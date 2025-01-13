@@ -1,21 +1,52 @@
-# Add project specific ProGuard rules here.
-# You can control the set of applied configuration files using the
-# proguardFiles setting in build.gradle.
-#
-# For more details, see
-#   http://developer.android.com/guide/developing/tools/proguard.html
+# Keep all activities
+-keep class edu.uon.comradeshub.ac.ke.BaadActivity { *; }
+-keep class edu.uon.comradeshub.ac.ke.MainActivity { *; }
+-keep class edu.uon.comradeshub.ac.ke.SplashActivity { *; }
+-keep class edu.uon.comradeshub.ac.ke.WebViewActivity { *; }
 
-# If your project uses WebView with JS, uncomment the following
-# and specify the fully qualified class name to the JavaScript interface
-# class:
-#-keepclassmembers class fqcn.of.javascript.interface.for.webview {
-#   public *;
-#}
+# Keep the adapter
+-keep class edu.uon.comradeshub.ac.ke.CardAdapter { *; }
 
-# Uncomment this to preserve the line number information for
-# debugging stack traces.
-#-keepattributes SourceFile,LineNumberTable
+# Keep Retrofit client and its members
+-keep class edu.uon.comradeshub.ac.ke.RetrofitClient { *; }
+-keepclassmembers class edu.uon.comradeshub.ac.ke.RetrofitClient { *; }
 
-# If you keep the line number information, uncomment this to
-# hide the original source file name.
-#-renamesourcefileattribute SourceFile
+# Keep OpenAI service classes
+-keep class edu.uon.comradeshub.ac.ke.OpenAIService { *; }
+-keep class edu.uon.comradeshub.ac.ke.ChatGPTRequest { *; }
+-keep class edu.uon.comradeshub.ac.ke.ChatGPTResponse { *; }
+
+# Protect against reflection-based access
+-keepclassmembers class edu.uon.comradeshub.ac.ke.** {
+    public <init>(...);
+}
+
+# Repackage classes
+-repackageclasses ''
+
+# Remove debug information
+-dontobfuscate
+-dontpreverify
+-optimizations !code/simplification/arithmetic,!field/*,!class/merging/*
+-assumenosideeffects class android.util.Log {
+    public static int v(...);
+    public static int i(...);
+    public static int w(...);
+    public static int d(...);
+    public static int e(...);
+}
+
+# Suppress warnings
+-dontwarn org.bouncycastle.jsse.BCSSLParameters
+-dontwarn org.bouncycastle.jsse.BCSSLSocket
+-dontwarn org.bouncycastle.jsse.provider.BouncyCastleJsseProvider
+-dontwarn org.conscrypt.Conscrypt$Version
+-dontwarn org.conscrypt.Conscrypt
+-dontwarn org.conscrypt.ConscryptHostnameVerifier
+-dontwarn org.openjsse.javax.net.ssl.SSLParameters
+-dontwarn org.openjsse.javax.net.ssl.SSLSocket
+-dontwarn org.openjsse.net.ssl.OpenJSSE
+
+# Add the missing rules from the file here
+# For example:
+
